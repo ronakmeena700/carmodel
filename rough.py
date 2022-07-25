@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
-# import pandas as pd
+import pandas as pd
 # from sklearn.tree import DecisionTreeRegressor
 # from sklearn.model_selection import train_test_split
 # from sklearn.compose import ColumnTransformer
@@ -9,7 +9,7 @@ import numpy as np
 # from sklearn.preprocessing import OneHotEncoder
 # from sklearn.preprocessing import LabelEncoder
 pipe=pickle.load(open('pipe.pkl','rb'))
-dataset=pickle.load(open('data.pkl','rb'))
+dataset=pickle.load(open('dataset.pkl','rb'))
 st.title('car rides prices predictor')
 distance=st.selectbox('distance',np.arange(0,100))
 cab_type=st.selectbox('Cab Type',dataset['cab_type'].unique())
